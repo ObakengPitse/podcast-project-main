@@ -54,6 +54,9 @@ class Component extends LitElement {
     .ep {
       display: flex;
     }
+    .epis {
+      display: inline;
+    }
   `;
 
   render() {
@@ -70,10 +73,10 @@ class Component extends LitElement {
     const seasons = show.seasons.map(({ episodes, title }) => {
       return html`
         <div class="season">
-          <strong>${title}</strong>
+          <strong style="color: blue; margin-top: 10px;">${title}</strong>
           ${episodes.map(({ file, title: innerTitle }) => {
             return html`
-              <div>
+              <div class="epis">
                 <div class"ep">${innerTitle}</div>
                 <div><audio style="background: linear-gradient(to left, #007db5, #ff8a00);
                 outline: none;" controls>

@@ -105,7 +105,16 @@ class Component extends LitElement {
       return html`
         <div class="show">
           <img class="showImage" src="${image}" width="200px" />
-          <div><button @click="${clickHandler}">${title}</button></div>
+          <div>
+            <button
+              style="background-color:dodgerblue;
+              border: 1px solid white; cursor: pointer;
+              overflow: hidden; color: white; width: 200px;"
+              @click="${clickHandler}"
+            >
+              ${title}
+            </button>
+          </div>
           <div>Updated: ${day} ${month} ${year}</div>
         </div>
       `;
