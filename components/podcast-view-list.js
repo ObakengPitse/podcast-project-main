@@ -115,7 +115,9 @@ class Component extends LitElement {
               ${title}
             </button>
           </div>
-          <div>Updated: ${day} ${month} ${year}</div>
+          <div style="font-size: x-small;">
+            Updated: ${day} ${month} ${year}
+          </div>
         </div>
       `;
     });
