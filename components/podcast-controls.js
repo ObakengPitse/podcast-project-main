@@ -46,16 +46,25 @@ class Component extends LitElement {
     };
 
     return html`
-      <div class="nav">
+      <div style="color: #1d84b5; font-weight: 400;" class="nav">
         <label>
           <span class="search">Search</span>
-          <input @input="${inputHandler}" value="${this.search}" />
+          <input
+            style="border: 1px solid grey; border-radius: 5px; height: 25px"
+            @input="${inputHandler}"
+            placeholder="search"
+            value="${this.search}"
+          />
         </label>
 
         <label>
           Sorting
           <select @change="${changeHandler}">
-            <option value="a-z" .selected="${this.sorting === "a-z"}">
+            <option
+              style="border: 1px solid grey; border-radius: 5px; height: 25px"
+              value="a-z"
+              .selected="${this.sorting === "a-z"}"
+            >
               A - Z
             </option>
             <option value="z-a" .selected="${this.sorting === "z-a"}">
