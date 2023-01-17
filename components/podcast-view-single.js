@@ -50,6 +50,10 @@ class Component extends LitElement {
       font-weight: 300;
       margin: 80px 0 10px 100px;
     }
+
+    .ep {
+      display: flex;
+    }
   `;
 
   render() {
@@ -71,7 +75,8 @@ class Component extends LitElement {
             return html`
               <div>
                 <div class"ep">${innerTitle}</div>
-                <div><audio controls>
+                <div><audio style="background: linear-gradient(to left, #007db5, #ff8a00);
+                outline: none;" controls>
                   <source src="${file}" />
                 </audio></div>
               </div>
@@ -83,7 +88,18 @@ class Component extends LitElement {
     });
 
     return html`
-      <button clas="back" @click="${backHandler}">Back</button>
+      <button
+        clas="back"
+        @click="${backHandler}"
+        style="color:blue;
+      background-color: white ;
+      width: 100px;
+      font-weight: 300;
+      margin: 80px 0 10px 100px;
+      border: 1px solid black;"
+      >
+        Back
+      </button>
       <h1>${show.title || ""}</h1>
       <img src="${show.image}" />
       ${seasons}
